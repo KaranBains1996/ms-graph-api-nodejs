@@ -13,10 +13,3 @@ exports.subscriptionConfiguration = {
   clientState: process.env.SUB_CLIENT_STATE,
   includeResourceData: false,
 };
-
-exports.certificateConfiguration = {
-  certificateId: 'myCertificateId',
-  relativeCertPath: './certificate.pem',
-  relativeKeyPath: './key.pem',
-  password: 'Password123',
-}; // the certificate will be generated during the first subscription creation, production solutions should rely on a certificate store
