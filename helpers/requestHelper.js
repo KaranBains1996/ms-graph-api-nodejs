@@ -35,7 +35,7 @@ async function createSubscription(
 
   console.log(payload);
 
-  let res = await client.api('/subscriptions').post(payload);
+  let res = await client.api(subscriptionPath).post(payload);
 
   console.log(res);
   return res;
@@ -43,7 +43,7 @@ async function createSubscription(
 
 async function listSubscriptions(accessToken) {
   const client = getGraphClient(accessToken);
-  let res = await client.api('/subscriptions').get();
+  let res = await client.api(subscriptionPath).get();
 
   return res;
 }
